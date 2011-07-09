@@ -7,7 +7,6 @@ namespace HibernatingRhinos.Macto.Models
         public string Reason { get; set; }
         public FlagType FlagType { get; set; }
 
-        // Should Fix Required for Flag also be a enum?
         public string FixRequired { get; set; }
 
         public DateTime FlaggedDate { get; set; }
