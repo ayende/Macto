@@ -10,6 +10,11 @@ namespace HibernatingRhinos.Macto.Models
         public int InmatesIn { get; set; }
         public int InmatesOut { get; set; }
 
+    	public InternalCountLocationReport()
+    	{
+    		
+    	}
+
         public InternalCountLocationReport(Location location, Officer officerInCharge, int inmatesIn, int inmatesOut)
         {
             LocationId = location.Id;
