@@ -1,14 +1,6 @@
 ﻿namespace HibernatingRhinos.Macto.Models.Processes
 {
-    public class AcceptInmateState
-    {
-    }
-
-    public interface ISaga<T>
-    {
-    }
-
-    public class AcceptInmateProcess : ISaga<AcceptInmateState>
+	public class AcceptInmateProcess : ISaga<AcceptInmateState>
     {
         public AcceptInmateState State { get; set; }
         public bool IsCompleted { get; set; }

@@ -85,6 +85,8 @@
     <Compile Include="Models\OfficerPosition.cs" />
     <Compile Include="Models\OfficerRank.cs" />
     <Compile Include="Models\Processes\AcceptInmateProcess.cs" />
+    <Compile Include="Models\Processes\AcceptInmateState.cs" />
+    <Compile Include="Models\Processes\ISaga.cs" />
     <Compile Include="Models\ReportType.cs" />
     <Compile Include="Models\StickyNote.cs" />
     <Compile Include="Models\Warrants\ArrestWarrant.cs" />
