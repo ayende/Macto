@@ -1,13 +1,19 @@
-﻿using System;
-
-namespace HibernatingRhinos.Macto.Models.Commands
+﻿namespace HibernatingRhinos.Macto.Models.Processes
 {
-    public class AcceptInmateSaga : ISaga<AcceptInmateState>
+    public class AcceptInmateState
+    {
+    }
+
+    public interface ISaga<T>
+    {
+    }
+
+    public class AcceptInmateProcess : ISaga<AcceptInmateState>
     {
         public AcceptInmateState State { get; set; }
         public bool IsCompleted { get; set; }
 
-        public AcceptInmateSaga()
+        public AcceptInmateProcess()
         {
             State = new AcceptInmateState();
         }
@@ -30,13 +36,5 @@ namespace HibernatingRhinos.Macto.Models.Commands
         {
             
         }
-    }
-
-    public class AcceptInmateState
-    {
-    }
-
-    public interface ISaga<T>
-    {
     }
 }
