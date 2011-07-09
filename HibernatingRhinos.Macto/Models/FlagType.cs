@@ -5,8 +5,6 @@
         Underage,
         WarrantRequired,
         WarrantExpired,
-        WarrantEnding,
-        CourtDate,
         InvalidWarrantAuthority
     }
 }
