@@ -84,7 +84,6 @@
     <Compile Include="Models\Officer.cs" />
     <Compile Include="Models\OfficerPosition.cs" />
     <Compile Include="Models\OfficerRank.cs" />
-    <Compile Include="Models\Commands\AcceptInmateCommand.cs" />
     <Compile Include="Models\ReportType.cs" />
     <Compile Include="Models\StickyNote.cs" />
     <Compile Include="Models\Warrant.cs" />
