@@ -9,6 +9,11 @@ namespace HibernatingRhinos.Macto.Models
         public string OfficerInChargeId { get; set; }
         public ICollection<string> InmateIds { get; set; }
 
+    	public ExternalCountLocationReport()
+    	{
+    		
+    	}
+
         public ExternalCountLocationReport(Location location, Officer officerInCharge, IEnumerable<Inmate> inmates)
         {
             InmateIds = new List<string>();
