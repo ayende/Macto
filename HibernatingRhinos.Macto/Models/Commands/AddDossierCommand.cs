@@ -2,7 +2,7 @@
 
 namespace HibernatingRhinos.Macto.Models.Commands
 {
-    public class TransferInmateCommand : ICommand
+    public class AddDossierCommand : ICommand
     {
         public bool CanExecute()
         {

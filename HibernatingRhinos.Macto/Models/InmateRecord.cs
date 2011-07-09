@@ -9,6 +9,8 @@ namespace HibernatingRhinos.Macto.Models
         public ICollection<Note> Notes { get; set; }
         public ICollection<StickyNote> StickyNotes { get; set; }
 
+        public string LocationId { get; set; }
+
         public InmateRecord()
         {
             Notes = new List<Note>();
