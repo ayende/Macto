@@ -5,7 +5,7 @@ namespace HibernatingRhinos.Macto.Models
 {
     public class Dossier
     {
-        public Inmate Inmate { get; set; }
+        public string InmateId { get; set; }
 
         public ICollection<Warrant> Warrants { get; set; }
         public bool IsFlagged { get; set; }

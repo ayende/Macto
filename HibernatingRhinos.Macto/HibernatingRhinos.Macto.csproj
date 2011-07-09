@@ -62,16 +62,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Commands\AddDossierCommand.cs" />
     <Compile Include="Models\Commands\AddWarrantCommand.cs" />
     <Compile Include="Models\Commands\ICommand.cs" />
     <Compile Include="Models\Commands\ReleaseInmateCommand.cs" />
     <Compile Include="Models\Commands\TransferInmateCommand.cs" />
     <Compile Include="Models\Count.cs" />
     <Compile Include="Models\CountState.cs" />
+    <Compile Include="Models\Court.cs" />
     <Compile Include="Models\Dossier.cs" />
     <Compile Include="Models\ExternalCountLocationReport.cs" />
     <Compile Include="Models\Flag.cs" />
     <Compile Include="Models\FlagType.cs" />
+    <Compile Include="Models\IIssuingAuthority.cs" />
     <Compile Include="Models\Inmate.cs" />
     <Compile Include="Models\InmateRecord.cs" />
     <Compile Include="Models\InternalCountLocationReport.cs" />
@@ -81,11 +84,10 @@
     <Compile Include="Models\Officer.cs" />
     <Compile Include="Models\OfficerPosition.cs" />
     <Compile Include="Models\OfficerRank.cs" />
-    <Compile Include="Models\Processes\AcceptInmateProcess.cs" />
+    <Compile Include="Models\Commands\AcceptInmateCommand.cs" />
     <Compile Include="Models\ReportType.cs" />
     <Compile Include="Models\StickyNote.cs" />
     <Compile Include="Models\Warrant.cs" />
-    <Compile Include="Models\WarrantType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
