@@ -21,7 +21,7 @@ namespace HibernatingRhinos.Macto.Models
             OfficerInChargeId = officerInCharge.Id;
             InmatesIn = inmatesIn;
             InmatesOut = inmatesOut;
-            RosterCount = location.RosterCount;
+            RosterCount = location.Roster.Count;
         }
     }
 }
