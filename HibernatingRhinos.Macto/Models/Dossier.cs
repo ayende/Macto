@@ -16,5 +16,13 @@ namespace HibernatingRhinos.Macto.Models
             Warrants = new List<Warrant>();
             FlagReasons = new List<Flag>();
         }
+
+		private int LastWarrantId { get; set; }
+
+		public void AddWarrant(Warrant warrant)
+		{
+			warrant.LocalId = ++LastWarrantId;
+			Warrants.Add(warrant);
+		}
     }
 }

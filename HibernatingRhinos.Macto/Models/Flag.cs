@@ -15,6 +15,6 @@ namespace HibernatingRhinos.Macto.Models
         public DateTime FixedDate { get; set; }
 
         // You can suppress a specific Flag by adding a warrant that allows it
-        public Warrant Suppression { get; set; }
+        public int SuppressionWarrantId { get; set; }
     }
 }
