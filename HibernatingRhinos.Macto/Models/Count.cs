@@ -12,6 +12,11 @@ namespace HibernatingRhinos.Macto.Models
         public ICollection<InternalCountLocationReport> InternalCountLocationReports { get; set; }
         public ICollection<ExternalCountLocationReport> ExternalCountLocationReports { get; set; }
 
+    	public Count()
+    	{
+    		
+    	}
+
         public Count(DateTime started)
         {
             Started = started;
