@@ -4,7 +4,15 @@ namespace HibernatingRhinos.Macto.Models.Warrants
 {
 	public class DetentionWarrant : Warrant
 	{
-		public DateTime ExpiryDate { get; set; }	// Store along with duration for ease of querying
+
+		public DateTime ExpiredAt // sould make querying easier
+		{
+			get
+			{
+				return EffectiveFrom.Add(Duration);
+			}
+		}
+
 		public TimeSpan Duration { get; set; }		// Store along with expiry date for ease of review
 	}
 }
