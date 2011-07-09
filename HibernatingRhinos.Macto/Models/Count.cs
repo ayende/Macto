@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Macto.Domain
+namespace HibernatingRhinos.Macto.Models
 {
     public class Count
     {

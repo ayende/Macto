@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Macto.Domain
+namespace HibernatingRhinos.Macto.Models
 {
     public class InmateRecord
     {

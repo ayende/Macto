@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Macto.Domain
+namespace HibernatingRhinos.Macto.Models
 {
     public class Warrant
     {

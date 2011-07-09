@@ -1,4 +1,4 @@
-﻿namespace Macto.Domain.Commands
+﻿namespace HibernatingRhinos.Macto.Models.Commands
 {
     public interface ICommand
     {

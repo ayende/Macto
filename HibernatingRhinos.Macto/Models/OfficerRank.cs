@@ -1,4 +1,4 @@
-﻿namespace Macto.Domain
+﻿namespace HibernatingRhinos.Macto.Models
 {
     public enum OfficerRank
     {

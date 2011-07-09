@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Macto.Domain.Commands
+namespace HibernatingRhinos.Macto.Models.Commands
 {
     public class TransferInmateCommand : ICommand
     {

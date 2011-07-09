@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Macto.Domain.Commands
+namespace HibernatingRhinos.Macto.Models.Commands
 {
-    public class AddWarrantCommand : ICommand
+    public class ReleaseInmateCommand : ICommand
     {
         public void Execute()
         {
