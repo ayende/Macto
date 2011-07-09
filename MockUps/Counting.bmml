@@ -1,0 +1,155 @@
+<mockup version="1.0" skin="sketch" measuredW="1303" measuredH="821" mockupW="800" mockupH="800">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="503" y="21" w="800" h="800" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Macto%2C%20making%20prison%20sucks...%20about%20the%20same%2C%20actually%0Ahttp%3A//macto.hibernatingrhinos.com/counts/114</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Title" x="541" y="117" w="-1" h="-1" measuredW="165" measuredH="62" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Counting</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::DataGrid" x="540" y="198" w="-1" h="-1" measuredW="264" measuredH="486" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <hasHeader>false</hasHeader>
+        <selectedIndex>-1</selectedIndex>
+        <text>%2C%20Roster%2C%20Counted%2C%20Out%0ACell%20Block%20A1%2C%20118%2C%20%3F%2C%20%0ACell%20Block%20A2%2C%20110%2C%20%3F%2C%20%0ACell%20Block%20B1%2C%2091%2C%2094%2C%203%0ACell%20Block%20B2%2C%20100%2C%20%3F%2C%20%0ACell%20Block%20B3%2C%20103%2C%2099%2C%202%0ACell%20Block%20B4%2C%20109%2C%20%3F%2C%20%0ACell%20Block%20C1%2C%20102%2C%20%3F%2C%20%0ACell%20Block%20C2%2C%2098%2C%2099%2C%202%0ACell%20Block%20C3%2C%20111%2C%20%3F%2C%20%0ACell%20Block%20C3%2C%20107%2C%20%3F%2C%20%0A%20%0ACourt%2C%20%2C9%2C%0AHospital%2C%2C2%0A%20%0ATotal%2C%201%5C%2C049%2C%20303</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::DateChooser" x="859" y="143" w="-1" h="-1" measuredW="169" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>03/07/2011%2012%3A30</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="784" y="144" w="-1" h="-1" measuredW="60" measuredH="25" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Started%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TitleWindow" x="829" y="205" w="450" h="292" measuredW="450" measuredH="400" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>0</bottomheight>
+        <dragger>false</dragger>
+        <text>External%20Count</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="844" y="247" w="-1" h="-1" measuredW="123" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Officer%20in%20charge%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::TextInput" x="982" y="244" w="288" h="-1" measuredW="80" measuredH="29" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Givol%20Adom</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="1241" y="246" w="-1" h="-1" measuredW="23" measuredH="25" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>...</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="844" y="280" w="62" h="25" measuredW="62" measuredH="25" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Location%3B</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::ComboBox" x="982" y="279" w="288" h="-1" measuredW="166" measuredH="25" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Court%20-%20Ayom%20Venora</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="844" y="305" w="-1" h="-1" measuredW="62" measuredH="25" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inmates%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::DataGrid" x="844" y="330" w="225" h="118" measuredW="152" measuredH="118" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Id%2C%20Name%0A3123%2C%20Khotef%20Onesh%0A3913%2C%20Lo%20Na%27aim%0A1023%2C%20Yesehv%20Harbe</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::TextInput" x="1078" y="355" w="186" h="-1" measuredW="46" measuredH="29" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1023</text>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::Label" x="1078" y="330" w="-1" h="-1" measuredW="72" measuredH="25" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inamte%20id%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Button" x="1166" y="393" w="-1" h="-1" measuredW="98" measuredH="28" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20Inmate</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Button" x="1204" y="463" w="-1" h="-1" measuredW="66" measuredH="28" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Report</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::TitleWindow" x="829" y="506" w="450" h="178" measuredW="450" measuredH="400" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>0</bottomheight>
+        <dragger>false</dragger>
+        <text>Internal%20Count</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Label" x="841" y="545" w="-1" h="-1" measuredW="123" measuredH="25" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Officer%20in%20charge%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::TextInput" x="979" y="542" w="288" h="-1" measuredW="76" measuredH="29" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sofer%20Tov</text>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="841" y="578" w="62" h="25" measuredW="62" measuredH="25" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Location%3B</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::ComboBox" x="979" y="577" w="288" h="-1" measuredW="113" measuredH="25" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cell%20Block%20B2</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Label" x="844" y="618" w="-1" h="-1" measuredW="53" measuredH="25" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Present</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::NumericStepper" x="982" y="617" w="59" h="-1" measuredW="49" measuredH="26" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>99</text>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Button" x="1206" y="647" w="-1" h="-1" measuredW="66" measuredH="28" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Report</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Label" x="1056" y="617" w="-1" h="-1" measuredW="30" measuredH="25" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Out</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::NumericStepper" x="1096" y="617" w="59" h="-1" measuredW="68" measuredH="26" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>0%09</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::RoundButton" x="697" y="652" w="64" h="32" measuredW="32" measuredH="32" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <color>13576743</color>
+        <shape>rectangle</shape>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
