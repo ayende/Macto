@@ -83,6 +83,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Commands\AcceptNewInmateCommand.cs" />
     <Compile Include="Models\Commands\AddCliffNoteCommand.cs" />
     <Compile Include="Models\Commands\AddStickyNoteCommand.cs" />
     <Compile Include="Models\Commands\AddWarrantCommand.cs" />

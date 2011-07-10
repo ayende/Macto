@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using HibernatingRhinos.Macto.Models.Processes;
 using HibernatingRhinos.Macto.Models.Warrants;
 using Raven.Client;
 using Raven.Client.Linq;
@@ -90,6 +91,9 @@ namespace HibernatingRhinos.Macto.Models.Commands
             }
 
             dossier.AddWarrant(warrant);
+
+            var acceptInmateProcess = new AcceptInmateProcess();
+            acceptInmateProcess.Consume(new WarrantsReceived() { Warrants = new [] { warrant } });
         }
 
         public enum WarrantType
