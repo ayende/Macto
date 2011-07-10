@@ -15,11 +15,6 @@ namespace HibernatingRhinos.Macto.Models.Commands
             
         }
 
-        public bool CanExecute()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Execute()
         {
             throw new NotImplementedException();

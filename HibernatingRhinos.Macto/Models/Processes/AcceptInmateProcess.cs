@@ -17,7 +17,7 @@
 
             // Create the record
             // Determine their location
-            // Add notes if present
+            // Add notes if present e.g. 
             // Add stick notes if present
 
             // Do we have a legal info? If yes create a dossier
