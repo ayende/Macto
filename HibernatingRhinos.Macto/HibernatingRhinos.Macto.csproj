@@ -83,15 +83,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Commands\AddDossierCommand.cs" />
     <Compile Include="Models\Commands\AddWarrantCommand.cs" />
     <Compile Include="Models\Commands\ICommand.cs" />
     <Compile Include="Models\Commands\ReleaseInmateCommand.cs" />
     <Compile Include="Models\Commands\TransferInmateCommand.cs" />
+    <Compile Include="Models\IIssuingAuthority.cs" />
     <Compile Include="Models\Processes\InmateRejected.cs" />
     <Compile Include="Models\Processes\NewInmateArrived.cs" />
     <Compile Include="Models\Processes\WarrantsReceived.cs" />
-    <Compile Include="Models\WarrantType.cs" />
     <Compile Include="Models\Count.cs" />
     <Compile Include="Models\CountState.cs" />
     <Compile Include="Models\Court.cs" />
@@ -99,7 +98,6 @@
     <Compile Include="Models\ExternalCountLocationReport.cs" />
     <Compile Include="Models\Flag.cs" />
     <Compile Include="Models\FlagType.cs" />
-    <Compile Include="Models\IIssuingAuthority.cs" />
     <Compile Include="Models\Inmate.cs" />
     <Compile Include="Models\InmateRecord.cs" />
     <Compile Include="Models\InternalCountLocationReport.cs" />
