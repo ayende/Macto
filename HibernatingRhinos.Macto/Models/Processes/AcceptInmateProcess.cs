@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using HibernatingRhinos.Macto.Models.Warrants;
+using Raven.Client;
 
 namespace HibernatingRhinos.Macto.Models.Processes
 {
     public class AcceptInmateProcess : ISaga<AcceptInmateState>
     {
+        public IDocumentSession Session { get; set; }
+
         public AcceptInmateState State { get; set; }
         public bool IsCompleted { get; set; }
 
@@ -20,7 +23,7 @@ namespace HibernatingRhinos.Macto.Models.Processes
                                  FirstName = newInmateArrived.FirstName,
                                  Surname = newInmateArrived.LastName
                              };
-            // Store it
+            Session.Store(inmate);
 
             var inmateRecord = new InmateRecord()
                                    {
@@ -29,7 +32,7 @@ namespace HibernatingRhinos.Macto.Models.Processes
                                        Notes = new List<Note>(),
                                        StickyNotes = new List<StickyNote>()
                                    };
-            // Store it
+            Session.Store(inmateRecord);
 
             var dossier = new Dossier()
                               {
@@ -38,21 +41,21 @@ namespace HibernatingRhinos.Macto.Models.Processes
                                   IsFlagged = false,
                                   Warrants = new List<Warrant>()
                               };
-            // Store it
+            Session.Store(dossier);
 
            AcceptInmateIfDone();
         }
 
         public void Consume(WarrantsReceived warrantsReceived)
         {
+            var dossier = Session.Load<Dossier>(State.DossierId);
+
             foreach (var warrant in warrantsReceived.Warrants)
             {
-                // Get the session, load the existing dossier and add the warrant
-
-                // Does the system have the logic to determine if we have all warrants needed?
-                // If yes need to implement this
+                dossier.AddWarrant(warrant);
             }
 
+            State.HaveChainOfIncarceration = dossier.HasValidChainOfIncarceration();
             AcceptInmateIfDone();
         }
 
