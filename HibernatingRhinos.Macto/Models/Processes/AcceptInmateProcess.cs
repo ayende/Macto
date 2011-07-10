@@ -1,6 +1,9 @@
-﻿namespace HibernatingRhinos.Macto.Models.Processes
+﻿using System.Collections.Generic;
+using HibernatingRhinos.Macto.Models.Warrants;
+
+namespace HibernatingRhinos.Macto.Models.Processes
 {
-	public class AcceptInmateProcess : ISaga<AcceptInmateState>
+    public class AcceptInmateProcess : ISaga<AcceptInmateState>
     {
         public AcceptInmateState State { get; set; }
         public bool IsCompleted { get; set; }
@@ -10,23 +13,58 @@
             State = new AcceptInmateState();
         }
 
-        public void Consume()
+        public void Consume(NewInmateArrived newInmateArrived)
         {
-            // Identify the Inmate
-            // Their name
+            var inmate = new Inmate()
+                             {
+                                 FirstName = newInmateArrived.FirstName,
+                                 Surname = newInmateArrived.LastName
+                             };
+            // Store it
 
-            // Create the record
-            // Determine their location
-            // Add notes if present e.g. 
-            // Add stick notes if present
+            var inmateRecord = new InmateRecord()
+                                   {
+                                       InmateId = inmate.Id,
+                                       LocationId = newInmateArrived.LocationId,
+                                       Notes = new List<Note>(),
+                                       StickyNotes = new List<StickyNote>()
+                                   };
+            // Store it
 
-            // Do we have a legal info? If yes create a dossier
-            // Add their warrants
+            var dossier = new Dossier()
+                              {
+                                  InmateId = inmate.Id,
+                                  FlagReasons = new List<Flag>(),
+                                  IsFlagged = false,
+                                  Warrants = new List<Warrant>()
+                              };
+            // Store it
+
+           AcceptInmateIfDone();
         }
 
-        private void AcceptInmateIfDone()
+        public void Consume(WarrantsReceived warrantsReceived)
         {
-            
+            foreach (var warrant in warrantsReceived.Warrants)
+            {
+                // Get the session, load the existing dossier and add the warrant
+
+                // Does the system have the logic to determine if we have all warrants needed?
+                // If yes need to implement this
+            }
+
+            AcceptInmateIfDone();
+        }
+
+	    public void Consume(InmateRejected inmateRejected)
+        {
+            // What do we do when an inmate is rejected?
+        }
+
+	    private void AcceptInmateIfDone()
+        {
+            if (State.InmateIdentified && State.HaveChainOfIncarceration)
+                IsCompleted = true;
         }
     }
 }

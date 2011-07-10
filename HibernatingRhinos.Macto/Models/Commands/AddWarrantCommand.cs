@@ -19,13 +19,5 @@ namespace HibernatingRhinos.Macto.Models.Commands
         {
             throw new NotImplementedException();
         }
-
-        public enum WarrantType
-        {
-            Arrest,
-            Detention,
-            Remand,
-            Sentencing
-        }
     }
 }

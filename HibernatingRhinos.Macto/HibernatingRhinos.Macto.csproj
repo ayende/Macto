@@ -67,6 +67,10 @@
     <Compile Include="Models\Commands\ICommand.cs" />
     <Compile Include="Models\Commands\ReleaseInmateCommand.cs" />
     <Compile Include="Models\Commands\TransferInmateCommand.cs" />
+    <Compile Include="Models\Processes\InmateRejected.cs" />
+    <Compile Include="Models\Processes\NewInmateArrived.cs" />
+    <Compile Include="Models\Processes\WarrantsReceived.cs" />
+    <Compile Include="Models\WarrantType.cs" />
     <Compile Include="Models\Count.cs" />
     <Compile Include="Models\CountState.cs" />
     <Compile Include="Models\Court.cs" />
@@ -80,6 +84,7 @@
     <Compile Include="Models\InternalCountLocationReport.cs" />
     <Compile Include="Models\IssuingAuthority.cs" />
     <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\LocationHistory.cs" />
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\Officer.cs" />
     <Compile Include="Models\OfficerPosition.cs" />
