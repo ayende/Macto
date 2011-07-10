@@ -2,13 +2,8 @@
 
 namespace HibernatingRhinos.Macto.Models.Commands
 {
-    public class AddDossierCommand : ICommand
+    public class AddCliffNoteCommand : ICommand
     {
-        public bool CanExecute()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Execute()
         {
             throw new NotImplementedException();

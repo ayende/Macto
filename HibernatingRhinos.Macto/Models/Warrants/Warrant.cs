@@ -4,7 +4,7 @@ namespace HibernatingRhinos.Macto.Models.Warrants
 {
     public abstract class Warrant
     {
-        public IIssuingAuthority Issuer { get; set; }
+        public string IssuerId { get; set; }
         public DateTime IssueAt { get; set; }
         public DateTime EffectiveFrom{ get; set; }
 

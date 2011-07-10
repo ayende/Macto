@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HibernatingRhinos.Macto.Models.Warrants;
 
 namespace HibernatingRhinos.Macto.Models
@@ -25,5 +24,11 @@ namespace HibernatingRhinos.Macto.Models
 			warrant.LocalId = ++LastWarrantId;
 			Warrants.Add(warrant);
 		}
+
+        public bool HasValidChainOfIncarceration()
+        {
+            // TODO: Need to implement logic
+            return true;
+        }
     }
 }

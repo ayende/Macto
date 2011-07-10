@@ -1,6 +1,6 @@
 ﻿namespace HibernatingRhinos.Macto.Models
 {
-    public class Note
+    public class CliffNote
     {
         public string ReportingOfficerId { get; set; }
         public string Reason { get; set; }
