@@ -29,7 +29,7 @@ namespace HibernatingRhinos.Macto.Models.Processes
                                    {
                                        InmateId = inmate.Id,
                                        LocationId = newInmateArrived.LocationId,
-                                       Notes = new List<Note>(),
+                                       CliffNotes = new List<CliffNote>(),
                                        StickyNotes = new List<StickyNote>()
                                    };
             Session.Store(inmateRecord);

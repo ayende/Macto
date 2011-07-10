@@ -104,7 +104,7 @@
     <Compile Include="Models\IssuingAuthority.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\LocationHistory.cs" />
-    <Compile Include="Models\Note.cs" />
+    <Compile Include="Models\CliffNote.cs" />
     <Compile Include="Models\Officer.cs" />
     <Compile Include="Models\OfficerPosition.cs" />
     <Compile Include="Models\OfficerRank.cs" />
