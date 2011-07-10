@@ -16,8 +16,16 @@ namespace HibernatingRhinos.Macto.Models.Processes
             State = new AcceptInmateState();
         }
 
+        private void InitialiseState()
+        {
+            if (State.Id != null)
+                State = Session.Load<AcceptInmateState>(State.Id);
+        }
+
         public void Consume(NewInmateArrived newInmateArrived)
         {
+            InitialiseState();
+
             var inmate = new Inmate()
                              {
                                  FirstName = newInmateArrived.FirstName,
@@ -43,11 +51,13 @@ namespace HibernatingRhinos.Macto.Models.Processes
                               };
             Session.Store(dossier);
 
-           AcceptInmateIfDone();
+            AcceptInmateIfDone();
         }
 
         public void Consume(WarrantsReceived warrantsReceived)
         {
+            InitialiseState();
+
             var dossier = Session.Load<Dossier>(State.DossierId);
 
             foreach (var warrant in warrantsReceived.Warrants)
@@ -60,9 +70,10 @@ namespace HibernatingRhinos.Macto.Models.Processes
         }
 
 	    public void Consume(InmateRejected inmateRejected)
-        {
-            // What do we do when an inmate is rejected?
-        }
+	    {
+	        InitialiseState();
+	        // What do we do when an inmate is rejected?
+	    }
 
 	    private void AcceptInmateIfDone()
         {
