@@ -8,6 +8,7 @@ namespace HibernatingRhinos.Macto.Models
 
         public ICollection<Note> Notes { get; set; }
         public ICollection<StickyNote> StickyNotes { get; set; }
+        public ICollection<LocationHistory> Locations { get; set; }
 
         public string LocationId { get; set; }
 
@@ -15,6 +16,7 @@ namespace HibernatingRhinos.Macto.Models
         {
             Notes = new List<Note>();
             StickyNotes = new List<StickyNote>();
+            Locations = new List<LocationHistory>();
         }
     }
 }
