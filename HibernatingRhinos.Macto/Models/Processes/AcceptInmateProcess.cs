@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using HibernatingRhinos.Macto.Models.Warrants;
 using Raven.Client;
 
 namespace HibernatingRhinos.Macto.Models.Processes

@@ -117,11 +117,7 @@
     <Compile Include="Models\Processes\ISaga.cs" />
     <Compile Include="Models\ReportType.cs" />
     <Compile Include="Models\StickyNote.cs" />
-    <Compile Include="Models\Warrants\ArrestWarrant.cs" />
-    <Compile Include="Models\Warrants\DetentionWarrant.cs" />
-    <Compile Include="Models\Warrants\RemandWarrant.cs" />
-    <Compile Include="Models\Warrants\SentencingWarrant.cs" />
-    <Compile Include="Models\Warrants\Warrant.cs" />
+    <Compile Include="Models\Warrant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

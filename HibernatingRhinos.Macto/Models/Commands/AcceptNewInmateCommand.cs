@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using HibernatingRhinos.Macto.Models.Processes;
-using HibernatingRhinos.Macto.Models.Warrants;
 
 namespace HibernatingRhinos.Macto.Models.Commands
 {

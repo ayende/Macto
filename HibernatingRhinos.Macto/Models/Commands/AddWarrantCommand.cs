@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using HibernatingRhinos.Macto.Models.Processes;
-using HibernatingRhinos.Macto.Models.Warrants;
 using Raven.Client;
 using Raven.Client.Linq;
 
@@ -43,52 +42,14 @@ namespace HibernatingRhinos.Macto.Models.Commands
                .Where(d => d.InmateId == _inmateId)
                .SingleOrDefault();
 
-            Warrant warrant = null;
-
-            switch (_warrantType)
-            {
-                case WarrantType.Arrest:
-                    warrant = new ArrestWarrant()
-                    {
-                        Duration = _duration,
-                        EffectiveFrom = _effectiveFrom,
-                        IssueAt = _issueAt,
-                        IssuerId = _issuerId,
-                        ScanLocationUrl = _scanLocationUrl
-                    };
-                    break;
-                case WarrantType.Detention:
-                    warrant = new DetentionWarrant()
-                    {
-                        Duration = _duration,
-                        EffectiveFrom = _effectiveFrom,
-                        IssueAt = _issueAt,
-                        IssuerId = _issuerId,
-                        ScanLocationUrl = _scanLocationUrl
-                    };
-                    break;
-                case WarrantType.Remand:
-                    warrant = new RemandWarrant()
-                    {
-                        EffectiveFrom = _effectiveFrom,
-                        IssueAt = _issueAt,
-                        IssuerId = _issuerId,
-                        ScanLocationUrl = _scanLocationUrl
-                    };
-                    break;
-                case WarrantType.Sentencing:
-                    warrant = new SentencingWarrant()
-                    {
-                        Duration = _duration,
-                        EffectiveFrom = _effectiveFrom,
-                        IssueAt = _issueAt,
-                        IssuerId = _issuerId,
-                        ScanLocationUrl = _scanLocationUrl
-                    };
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException("warrantType");
-            }
+            var warrant = new Warrant()
+                              {
+                                  Duration = _duration,
+                                  EffectiveFrom = _effectiveFrom,
+                                  IssueAt = _issueAt,
+                                  IssuerId = _issuerId,
+                                  ScanLocationUrl = _scanLocationUrl
+                              };
 
             dossier.AddWarrant(warrant);
 
