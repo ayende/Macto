@@ -37,6 +37,18 @@
     <Reference Include="AsyncCtpLibrary">
       <HintPath>..\packages\RavenDB.1.0.0.397\lib\net40\AsyncCtpLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Esent.Interop">
+      <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\Esent.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="MissingBitsFromClientProfile">
       <HintPath>..\packages\RavenDB.1.0.0.397\lib\net40\MissingBitsFromClientProfile.dll</HintPath>
     </Reference>
@@ -54,6 +66,18 @@
     </Reference>
     <Reference Include="Raven.Json">
       <HintPath>..\packages\RavenDB.1.0.0.397\lib\net40\Raven.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.PersistentHashTable">
+      <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\Rhino.PersistentHashTable.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Queues">
+      <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\Rhino.Queues.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.ServiceBus">
+      <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\Rhino.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.ServiceBus.Host">
+      <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\Rhino.ServiceBus.Host.exe</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -78,6 +102,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Wintellect.Threading">
+      <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\Wintellect.Threading.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
