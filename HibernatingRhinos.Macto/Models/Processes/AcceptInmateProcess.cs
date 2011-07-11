@@ -27,7 +27,7 @@ namespace HibernatingRhinos.Macto.Models.Processes
 
             var inmate = new Inmate()
                              {
-                                 FirstName = newInmateArrived.FirstName,
+                                 FullName = newInmateArrived.FullName,
                                  Surname = newInmateArrived.LastName
                              };
             Session.Store(inmate);

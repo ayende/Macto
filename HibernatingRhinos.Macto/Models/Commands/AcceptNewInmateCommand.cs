@@ -6,20 +6,20 @@ namespace HibernatingRhinos.Macto.Models.Commands
 {
     public class AcceptNewInmateCommand : ICommand
     {
-        private readonly string _firstName;
+        private readonly string _fullName;
         private readonly string _lastName;
         private readonly DateTime _dateOfBirth;
         private readonly string _locationId;
         private readonly ICollection<Warrant> _warrants;
 
         public AcceptNewInmateCommand(
-            string firstName,
+            string fullName,
             string lastName,
             DateTime dateOfBirth,
             string locationId,
             ICollection<Warrant> warrants)
         {
-            _firstName = firstName;
+            _fullName = fullName;
             _lastName = lastName;
             _dateOfBirth = dateOfBirth;
             _locationId = locationId;
@@ -31,7 +31,7 @@ namespace HibernatingRhinos.Macto.Models.Commands
             var acceptNewInmateProcess = new AcceptInmateProcess();
             acceptNewInmateProcess.Consume(new NewInmateArrived()
                                                {
-                                                   FirstName = _firstName,
+                                                   FullName = _fullName,
                                                    LastName = _lastName,
                                                    DateOfBirth = _dateOfBirth,
                                                    LocationId = _locationId
