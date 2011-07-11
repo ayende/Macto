@@ -7,6 +7,7 @@ namespace HibernatingRhinos.Macto.Models
         public string IssuerId { get; set; }
         public DateTime IssueAt { get; set; }
         public DateTime EffectiveFrom{ get; set; }
+        public WarrantType Type { get; set; }
 
         public string ScanLocationUrl { get; set; }
 

@@ -118,6 +118,7 @@
     <Compile Include="Models\Commands\ICommand.cs" />
     <Compile Include="Models\Commands\ReleaseInmateCommand.cs" />
     <Compile Include="Models\Commands\TransferInmateCommand.cs" />
+    <Compile Include="Models\WarrantType.cs" />
     <Compile Include="Models\IIssuingAuthority.cs" />
     <Compile Include="Models\Processes\InmateRejected.cs" />
     <Compile Include="Models\Processes\NewInmateArrived.cs" />

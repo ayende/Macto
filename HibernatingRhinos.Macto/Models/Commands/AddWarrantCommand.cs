@@ -44,6 +44,7 @@ namespace HibernatingRhinos.Macto.Models.Commands
 
             var warrant = new Warrant()
                               {
+                                  Type = _warrantType,
                                   Duration = _duration,
                                   EffectiveFrom = _effectiveFrom,
                                   IssueAt = _issueAt,
@@ -57,12 +58,6 @@ namespace HibernatingRhinos.Macto.Models.Commands
             acceptInmateProcess.Consume(new WarrantsReceived() { Warrants = new [] { warrant } });
         }
 
-        public enum WarrantType
-        {
-            Arrest,
-            Detention,
-            Remand,
-            Sentencing
-        }
+        
     }
 }
