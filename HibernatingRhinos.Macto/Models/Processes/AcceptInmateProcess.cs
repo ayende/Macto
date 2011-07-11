@@ -1,18 +1,31 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using HibernatingRhinos.Macto.Models.Processes.Messages;
 using Raven.Client;
+using Rhino.ServiceBus;
+using Rhino.ServiceBus.Sagas;
 
 namespace HibernatingRhinos.Macto.Models.Processes
 {
-    public class AcceptInmateProcess : ISaga<AcceptInmateState>
+    public class AcceptInmateProcess : 
+        ISaga<AcceptInmateState>, 
+        InitiatedBy<NewInmateArrived>,
+        ConsumerOf<InmateRejected>
     {
-        public IDocumentSession Session { get; set; }
+        private readonly IDocumentSession _documentSession;
+        private readonly IServiceBus _bus;
 
         public AcceptInmateState State { get; set; }
+        public Guid Id { get; set; }
+
         public bool IsCompleted { get; set; }
 
-        public AcceptInmateProcess()
+        public AcceptInmateProcess(
+            IDocumentSession documentSession,
+            IServiceBus bus)
         {
+            _documentSession = documentSession;
+            _bus = bus;
             State = new AcceptInmateState();
         }
 
@@ -23,7 +36,7 @@ namespace HibernatingRhinos.Macto.Models.Processes
                                  FullName = newInmateArrived.FullName,
                                  Surname = newInmateArrived.LastName
                              };
-            Session.Store(inmate);
+            _documentSession.Store(inmate);
 
             var inmateRecord = new InmateRecord()
                                    {
@@ -32,7 +45,7 @@ namespace HibernatingRhinos.Macto.Models.Processes
                                        CliffNotes = new List<CliffNote>(),
                                        StickyNotes = new List<StickyNote>()
                                    };
-            Session.Store(inmateRecord);
+            _documentSession.Store(inmateRecord);
 
             var dossier = new Dossier()
                               {
@@ -41,14 +54,14 @@ namespace HibernatingRhinos.Macto.Models.Processes
                                   IsFlagged = false,
                                   Warrants = new List<Warrant>()
                               };
-            Session.Store(dossier);
+            _documentSession.Store(dossier);
 
             AcceptInmateIfDone();
         }
 
         public void Consume(WarrantsReceived warrantsReceived)
         {
-            var dossier = Session.Load<Dossier>(State.DossierId);
+            var dossier = _documentSession.Load<Dossier>(State.DossierId);
 
             foreach (var warrant in warrantsReceived.Warrants)
             {
@@ -67,7 +80,10 @@ namespace HibernatingRhinos.Macto.Models.Processes
 	    private void AcceptInmateIfDone()
         {
             if (State.InmateIdentified && State.HaveChainOfIncarceration)
+            {
+                _bus.Publish(new InmateAccepted() { InmateId = State.InmateId });
                 IsCompleted = true;
+            }
         }
     }
 }

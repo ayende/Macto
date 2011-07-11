@@ -110,14 +110,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Commands\AcceptNewInmateCommand.cs" />
     <Compile Include="Models\Commands\AddCliffNoteCommand.cs" />
-    <Compile Include="Models\Commands\AddStickyNoteCommand.cs" />
     <Compile Include="Models\Commands\AddWarrantCommand.cs" />
     <Compile Include="Models\Commands\FlagDossierCommand.cs" />
     <Compile Include="Models\Commands\ICommand.cs" />
     <Compile Include="Models\Commands\ReleaseInmateCommand.cs" />
     <Compile Include="Models\Commands\TransferInmateCommand.cs" />
+    <Compile Include="Models\Processes\Messages\InmateAccepted.cs" />
     <Compile Include="Models\WarrantType.cs" />
     <Compile Include="Models\IIssuingAuthority.cs" />
     <Compile Include="Models\Processes\Messages\InmateRejected.cs" />
@@ -142,7 +141,6 @@
     <Compile Include="Models\OfficerRank.cs" />
     <Compile Include="Models\Processes\AcceptInmateProcess.cs" />
     <Compile Include="Models\Processes\AcceptInmateState.cs" />
-    <Compile Include="Models\Processes\ISaga.cs" />
     <Compile Include="Models\ReportType.cs" />
     <Compile Include="Models\StickyNote.cs" />
     <Compile Include="Models\Warrant.cs" />

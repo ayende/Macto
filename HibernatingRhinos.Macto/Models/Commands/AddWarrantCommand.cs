@@ -4,6 +4,7 @@ using HibernatingRhinos.Macto.Models.Processes;
 using HibernatingRhinos.Macto.Models.Processes.Messages;
 using Raven.Client;
 using Raven.Client.Linq;
+using Rhino.ServiceBus;
 
 namespace HibernatingRhinos.Macto.Models.Commands
 {
@@ -18,6 +19,7 @@ namespace HibernatingRhinos.Macto.Models.Commands
         private readonly TimeSpan _duration;
 
         public IDocumentSession Session { get; set; }
+        public IServiceBus Bus { get; set; }
 
         public AddWarrantCommand(
             string inmateId,
@@ -55,10 +57,7 @@ namespace HibernatingRhinos.Macto.Models.Commands
 
             dossier.AddWarrant(warrant);
 
-            var acceptInmateProcess = new AcceptInmateProcess();
-            acceptInmateProcess.Consume(new WarrantsReceived() { Warrants = new [] { warrant } });
+            Bus.Reply(new WarrantsReceived() { Warrants = new [] { warrant } });
         }
-
-        
     }
 }
