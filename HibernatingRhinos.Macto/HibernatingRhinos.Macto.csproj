@@ -48,6 +48,10 @@
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\Rhino-ESB.1.8.0.1\lib\Net40\log4net.dll</HintPath>
+      <HintPath>..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.2.5.3\lib\NET40\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="MissingBitsFromClientProfile">
       <HintPath>..\packages\RavenDB.1.0.0.397\lib\net40\MissingBitsFromClientProfile.dll</HintPath>
@@ -107,9 +111,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Windsor\Installers\ControllersInstaller.cs" />
     <Compile Include="Models\Commands\AddCliffNoteCommand.cs" />
     <Compile Include="Models\Commands\AddWarrantCommand.cs" />
     <Compile Include="Models\Commands\FlagDossierCommand.cs" />
@@ -144,6 +150,7 @@
     <Compile Include="Models\ReportType.cs" />
     <Compile Include="Models\StickyNote.cs" />
     <Compile Include="Models\Warrant.cs" />
+    <Compile Include="Infrastructure\Windsor\WindsorControllerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -235,7 +242,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
