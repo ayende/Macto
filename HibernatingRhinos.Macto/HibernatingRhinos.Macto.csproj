@@ -120,9 +120,9 @@
     <Compile Include="Models\Commands\TransferInmateCommand.cs" />
     <Compile Include="Models\WarrantType.cs" />
     <Compile Include="Models\IIssuingAuthority.cs" />
-    <Compile Include="Models\Processes\InmateRejected.cs" />
-    <Compile Include="Models\Processes\NewInmateArrived.cs" />
-    <Compile Include="Models\Processes\WarrantsReceived.cs" />
+    <Compile Include="Models\Processes\Messages\InmateRejected.cs" />
+    <Compile Include="Models\Processes\Messages\NewInmateArrived.cs" />
+    <Compile Include="Models\Processes\Messages\WarrantsReceived.cs" />
     <Compile Include="Models\Count.cs" />
     <Compile Include="Models\CountState.cs" />
     <Compile Include="Models\Court.cs" />

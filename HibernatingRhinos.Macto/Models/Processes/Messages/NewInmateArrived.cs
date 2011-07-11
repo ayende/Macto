@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HibernatingRhinos.Macto.Models.Processes
+namespace HibernatingRhinos.Macto.Models.Processes.Messages
 {
     public class NewInmateArrived
     {

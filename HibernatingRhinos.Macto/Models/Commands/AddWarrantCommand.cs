@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using HibernatingRhinos.Macto.Models.Processes;
+using HibernatingRhinos.Macto.Models.Processes.Messages;
 using Raven.Client;
 using Raven.Client.Linq;
 
