@@ -10,6 +10,10 @@ namespace HibernatingRhinos.Macto.Models
         public ICollection<StickyNote> StickyNotes { get; set; }
         public ICollection<LocationHistory> Locations { get; set; }
 
+        public AttachmentReference GuardsReport { get; set; }
+        public AttachmentReference IntelligenceReport { get; set; }
+        public AttachmentReference DiscipliningActionsReport { get; set; }
+
         public string LocationId { get; set; }
 
         public InmateRecord()
