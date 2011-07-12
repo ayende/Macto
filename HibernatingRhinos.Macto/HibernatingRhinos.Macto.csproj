@@ -123,6 +123,8 @@
     <Compile Include="Models\Commands\ICommand.cs" />
     <Compile Include="Models\Commands\ReleaseInmateCommand.cs" />
     <Compile Include="Models\Commands\TransferInmateCommand.cs" />
+    <Compile Include="Models\LocationType.cs" />
+    <Compile Include="Models\Prison.cs" />
     <Compile Include="Models\Processes\Messages\InmateAccepted.cs" />
     <Compile Include="Models\WarrantType.cs" />
     <Compile Include="Models\IIssuingAuthority.cs" />
