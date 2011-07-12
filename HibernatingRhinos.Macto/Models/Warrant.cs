@@ -9,7 +9,7 @@ namespace HibernatingRhinos.Macto.Models
         public DateTime EffectiveFrom{ get; set; }
         public WarrantType Type { get; set; }
 
-        public string ScanLocationUrl { get; set; }
+        public AttachmentReference WarrantScan { get; set; }
 
 		// this id is relevant only within the scope a dossier
     	public int LocalId { get; set; }
