@@ -10,7 +10,10 @@ namespace HibernatingRhinos.Macto.Models.Processes
     public class AcceptInmateProcess : 
         ISaga<AcceptInmateState>, 
         InitiatedBy<NewInmateArrived>,
-        ConsumerOf<InmateRejected>
+        ConsumerOf<InmateRejected>,
+        ConsumerOf<IntelligenceReportReceived>,
+        ConsumerOf<MedicalResultsReceived>,
+        ConsumerOf<WarrantsReceived>
     {
         private readonly IDocumentSession _documentSession;
         private readonly IServiceBus _bus;
@@ -76,6 +79,24 @@ namespace HibernatingRhinos.Macto.Models.Processes
 	    {
 	        // What do we do when an inmate is rejected?
 	    }
+
+
+        public void Consume(IntelligenceReportReceived message)
+        {
+            var record = _documentSession.Load<InmateRecord>(State.InmateRecordId);
+            record.IntelligenceReport = message.ScanAttachmentId;
+            State.IntelligenceGathered = true;
+            AcceptInmateIfDone();
+        }
+
+        public void Consume(MedicalResultsReceived message)
+        {
+            var record = _documentSession.Load<InmateRecord>(State.InmateRecordId);
+            record.MedicalReport = message.ScanAttachmentId;
+            record.PassedMedical = message.PassedMedical;
+            State.PassedMedical = message.PassedMedical;
+            AcceptInmateIfDone();
+        }
 
 	    private void AcceptInmateIfDone()
         {

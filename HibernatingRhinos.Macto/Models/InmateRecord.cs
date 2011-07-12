@@ -13,6 +13,9 @@ namespace HibernatingRhinos.Macto.Models
         public AttachmentReference GuardsReport { get; set; }
         public AttachmentReference IntelligenceReport { get; set; }
         public AttachmentReference DiscipliningActionsReport { get; set; }
+        public AttachmentReference MedicalReport { get; set; }
+
+        public bool PassedMedical { get; set; }
 
         public string LocationId { get; set; }
 
