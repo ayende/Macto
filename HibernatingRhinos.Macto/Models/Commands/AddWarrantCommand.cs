@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using HibernatingRhinos.Macto.Models.Processes;
 using HibernatingRhinos.Macto.Models.Processes.Messages;
 using Raven.Client;
 using Raven.Client.Linq;
@@ -15,7 +14,7 @@ namespace HibernatingRhinos.Macto.Models.Commands
         private readonly DateTime _issueAt;
         private readonly DateTime _effectiveFrom;
         private readonly string _issuerId;
-        private readonly string _scanLocationUrl;
+        private readonly string _scanAttachmentId;
         private readonly TimeSpan _duration;
 
         public IDocumentSession Session { get; set; }
@@ -27,7 +26,7 @@ namespace HibernatingRhinos.Macto.Models.Commands
             DateTime issueAt,
             DateTime effectiveFrom,
             string issuerId,
-            string scanLocationUrl,
+            string scanAttachmentId,
             TimeSpan duration)
         {
             _inmateId = inmateId;
@@ -35,7 +34,7 @@ namespace HibernatingRhinos.Macto.Models.Commands
             _issueAt = issueAt;
             _effectiveFrom = effectiveFrom;
             _issuerId = issuerId;
-            _scanLocationUrl = scanLocationUrl;
+            _scanAttachmentId = scanAttachmentId;
             _duration = duration;
         }
 
@@ -52,7 +51,7 @@ namespace HibernatingRhinos.Macto.Models.Commands
                                   EffectiveFrom = _effectiveFrom,
                                   IssueAt = _issueAt,
                                   IssuerId = _issuerId,
-                                  ScanLocationUrl = _scanLocationUrl
+                                  WarrantScan = _scanAttachmentId
                               };
 
             dossier.AddWarrant(warrant);

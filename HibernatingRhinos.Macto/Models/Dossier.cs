@@ -7,8 +7,11 @@ namespace HibernatingRhinos.Macto.Models
         public string InmateId { get; set; }
 
         public ICollection<Warrant> Warrants { get; set; }
+
         public bool IsFlagged { get; set; }
         public ICollection<Flag> FlagReasons { get; set; }
+
+        public AttachmentReference DossierScan { get; set; }
 
         public Dossier()
         {
